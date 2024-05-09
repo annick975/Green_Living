@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sustainable Living Tips</title>
+    <link rel="stylesheet" href="gpt.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Sustainable Living Tips</h1>
+      <nav>
+        <ul>
+          <li><a href="#green-living">Green Living Tips</a></li>
+          <li><a href="#eco-products">Eco-Friendly Products</a></li>
+
+          <!-- Add more navigation links as needed -->
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section id="green-living">
+        <h2>Green Living Tips(sustainable living practices)</h2>
+        <div class="img-container">
+          <img src="slide1.jpeg" alt="green living tips" />
+          <img src="slide2.jpeg" alt="" />
+          <img src="slide3.jpeg" alt="" />
+        </div>
+      </section>
+      <section id="eco-products">
+        <h2>Eco-Friendly Products(eco-friendly lifestyle choices)</h2>
+        <div class="tab">
+          <button class="tablinks" onclick="openCity(event, 'Kitchen')">
+            Kitchen
+          </button>
+          <button class="tablinks" onclick="openCity(event, 'Garden')">
+            Garden
+          </button>
+          <button class="tablinks" onclick="openCity(event, 'Personal care')">
+            Personal care
+          </button>
+        </div>
+
+        <div id="Kitchen" class="tabcontent">
+          <h3>Kitchen</h3>
+          <img src="product1.jpeg" alt="" style="width: 10rem" />
+          <img src="product2.jpeg" alt="" style="width: 10rem" />
+          <img src="product3.jpeg" alt="" style="width: 10rem" />
+        </div>
+
+        <div id="Garden" class="tabcontent">
+          <h3>Garden</h3>
+          <img src="product4.jpeg" alt="" style="width: 10rem" />
+          <img src="product5.jpeg" alt="" style="width: 10rem" />
+          <img src="product6.jpeg" alt="" style="width: 10rem" />
+        </div>
+
+        <div id="Personal care" class="tabcontent">
+          <h3>Personal care</h3>
+          <img src="product7.jpeg" alt="" style="width: 10rem" />
+          <img src="product8.jpeg" alt="" style="width: 10rem" />
+          <img src="product9.jpeg" alt="" style="width: 10rem" />
+        </div>
+      </section>
+      <section id="green-living">
+        <h2>reducing environmental impact</h2>
+        <div class="tab">
+          <button class="tablinks" onclick="openCity(event, 'Understand')">
+            Understand environmental impact
+          </button>
+          <button class="tablinks" onclick="openCity(event, 'Do')">
+            What can I do?
+          </button>
+        </div>
+        <div id="Understand" class="tabcontent">
+          <h3>What is environmental impact?</h3>
+
+          <p>
+            Environmental impact refers to the effect that human activities have
+            on the natural world. It encompasses the changes, both positive and
+            negative, that our actions cause in ecosystems, biodiversity, air and
+            water quality, and the overall health of the planet. These impacts can
+            be direct, such as pollution from factories or deforestation, or
+            indirect, like the carbon emissions contributing to climate change.
+            Understanding environmental impact is crucial for making informed
+            decisions about how we interact with our surroundings and for
+            fostering sustainable practices that minimize harm to the environment.
+          </p>
+        </div>
+
+        <div id="Do" class="tabcontent">
+          <h3>What can I do?</h3>
+          <p>
+            To minimize environmental impact, individuals can adopt various
+            sustainable practices in their daily lives. Simple actions, such as
+            reducing energy consumption, conserving water, and minimizing waste
+            generation, can collectively make a significant difference. Choosing
+            eco-friendly transportation options, such as walking, cycling, or
+            using public transit, helps reduce carbon emissions. Additionally,
+            supporting environmentally responsible products and businesses
+            encourages sustainable production and consumption patterns. By making
+            conscious choices in our consumption habits, we can contribute to
+            preserving the natural world for future generations.
+          </p>
+        </div>
+      </section>
+      <section id="green-living">
+        <h2>Fun facts(Did you know?)</h2>
+        <h3>Discover more fun facts around you</h3>
+        <div class="slideshow-container">
+          <div class="mySlides fade">
+            <img src="slide1.jpeg" style="width: 100%" />
+            <div class="text">A beautiful environment starts with you</div>
+          </div>
+  
+          <div class="mySlides fade">
+            <img src="slide2.jpeg" style="width: 100%" />
+            <div class="text">Caption Two</div>
+          </div>
+  
+          <div class="mySlides fade">
+            <img src="slide3.jpeg" style="width: 100%" />
+            <div class="text">Caption Three</div>
+          </div>
+  
+          <div class="mySlides fade">
+            <img src="slide4.jpeg" style="width: 100%" />
+            <div class="text">Caption Text</div>
+          </div>
+        </div>
+        <br />
+  
+        <div style="text-align: center">
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <p>&copy; 2024 Sustainable Living Tips</p>
+    </footer>
+    <script>
+      let slideIndex = 0;
+      showSlides();
+
+      function showSlides() {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        let dots = document.getElementsByClassName("dot");
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {
+          slideIndex = 1;
+        }
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+        setTimeout(showSlides, 5000);
+      }
+
+      function openCity(evt, cityName) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+          tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+          tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+        document.getElementById(cityName).style.display = "block";
+        evt.currentTarget.className += " active";
+      }
+    </script>
+  </body>
+</html>
