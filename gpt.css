@@ -141,7 +141,7 @@ footer {
 
 .img-container {
   
-  max-width: 90rem;
+  max-width: 85rem;
   margin: 20px auto;
   padding: 0 35px;
 }
@@ -206,3 +206,6 @@ blockquote p {
   margin: 0;
 }
 
+a{
+  text-decoration: none;
+}
