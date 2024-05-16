@@ -7,17 +7,22 @@
     <link rel="stylesheet" href="goGreen.css" />
   </head>
   <body>
-    <header>
+    <header id="navbar">
+      <button id="menuButton">Menu▾</button>
       <h1>Sustainable Living Tips</h1>
       <nav>
         <ul>
           <li><a href="#green-living">Green Living Tips</a></li>
           <li><a href="#eco-products">Eco-Friendly Products</a></li>
-
-          <!-- Add more navigation links as needed -->
+          <li href="#">Food</li>
+          <li href="#">Greenery</li>
+          <li href="#">Habitant</li>
+          <li href="#">Niche</li>
+          <li href="#">Fire</li>
         </ul>
       </nav>
     </header>
+    
     <main>
       <section id="green-living">
         <h1>Green Living Tips(sustainable living practices)</h1>
@@ -487,6 +492,17 @@
         document.getElementById(cityName).style.display = "block";
         evt.currentTarget.className += " active";
       }
+      // Add this JavaScript to toggle the display of the navigation links when the menu button is clicked
+document.addEventListener('DOMContentLoaded', function() {
+  const menuButton = document.getElementById('menuButton');
+  const nav = document.querySelector('nav');
+
+  // Toggle the display of navigation links when the menu button is clicked
+  menuButton.addEventListener('click', function() {
+    nav.classList.toggle('show-menu');
+  });
+});
+
     </script>
   </body>
 </html>

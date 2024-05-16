@@ -133,11 +133,7 @@ footer {
   text-align: center;
   padding: 20px;
 }
-@media (width < 600px) {
-  header {
-    display: none;
-  }
-}
+
 
 .img-container {
   
@@ -208,4 +204,44 @@ blockquote p {
 
 a{
   text-decoration: none;
+}
+
+/* Add this CSS to hide the menu on small screens */
+@media only screen and (max-width: 600px) {
+  header h1,
+  nav {
+    display: none;
+  }
+}
+
+/* Add this CSS to style the menu button */
+#menuButton {
+  display: none;
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+/* Adjustments for mobile */
+@media only screen and (max-width: 600px) {
+  #menuButton {
+    display: block;
+    margin: 10px auto;
+  }
+  nav ul {
+    display: none;
+    text-align: center;
+  }
+  nav ul li {
+    display: block;
+    margin-bottom: 10px;
+  }
+}
+/* Add this CSS to control the display of navigation links */
+nav.show-menu ul {
+  display: block;
 }
