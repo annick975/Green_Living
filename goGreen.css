@@ -133,7 +133,40 @@ footer {
   text-align: center;
   padding: 20px;
 }
-
+@media (width < 600px) {
+  .before{
+    display: none;
+  }
+  .dropdown{
+    display: block;
+  }
+  li.dropdown {
+    display: inline-block;
+  }
+  .dropdown-content{
+    display: none;
+    position: absolute;
+    background-color: #dfdfe2;
+    min-width: 150px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+  }
+  .dropdown-content a {
+    color: black;
+   padding: 12px 16px;
+   text-decoration: none;
+   display: block;
+   text-align: left;
+  }
+  
+  .dropdown-content a:hover  {
+    background-color:#f1f1f1;
+  }
+  
+  .dropdown:hover .dropdown-content{
+    display: block;
+  }
+}
 
 .img-container {
   
@@ -206,42 +239,6 @@ a{
   text-decoration: none;
 }
 
-/* Add this CSS to hide the menu on small screens */
-@media only screen and (max-width: 600px) {
-  header h1,
-  nav {
-    display: none;
-  }
-}
-
-/* Add this CSS to style the menu button */
-#menuButton {
+.dropdown{
   display: none;
-  background-color: #4caf50;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 16px;
-}
-
-/* Adjustments for mobile */
-@media only screen and (max-width: 600px) {
-  #menuButton {
-    display: block;
-    margin: 10px auto;
-  }
-  nav ul {
-    display: none;
-    text-align: center;
-  }
-  nav ul li {
-    display: block;
-    margin-bottom: 10px;
-  }
-}
-/* Add this CSS to control the display of navigation links */
-nav.show-menu ul {
-  display: block;
 }
