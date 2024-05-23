@@ -5,468 +5,527 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sustainable Living Tips</title>
     <link rel="stylesheet" href="goGreen.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: '#da373d',
+            }
+          }
+        }
+      }
+    </script>
+      <style type="text/tailwindcss">
+        @layer utilities {
+          .content-auto {
+            content-visibility: auto;
+          }
+        }
+      </style>
   </head>
   <body>
     <header>
-      <h1>Sustainable Living Tips</h1>
-      <nav class="before">
-        <ul>
-          <li><a href="#green-living">Green Living Tips</a></li>
-          <li><a href="#eco-products">Eco-Friendly Products</a></li>
-          <li><a href="">Food</a></li>
-          <li><a href="">Greenery</a></li>
-          <li><a href="">Drink</a></li>
-          <li><a href="">Stars</a></li>
-          <li><a href="">Fire</a></li>
-
-        </ul>
-      </nav>
       <nav>
-        <ul>
-          <li class="dropdown">
-            <a href="#" class="dropbtn">Menu▾</a>
-            <div class="dropdown-content">
-              <a href="#green-living">Green Living Tips</a>
-              <a href="#eco-products">Eco-Friendly Products</a>
-              <a href="">Food</a>
-              <a href="">Greenery</a>
-              <a href="">Drink</a>
-              <a href="">Stars</a>
-              <a href="">Fire</a>
+        <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+          <div class="relative flex h-16 items-center justify-between">
+            <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+              <!-- Mobile menu button-->
+              <button type="button" class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-controls="mobile-menu" aria-expanded="false">
+                <span class="absolute -inset-0.5"></span>
+                <span class="sr-only">Open main menu</span>
+                <!--
+                  Icon when menu is closed.
+      
+                  Menu open: "hidden", Menu closed: "block"
+                -->
+                <svg class="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                </svg>
+                <!--
+                  Icon when menu is open.
+      
+                  Menu open: "block", Menu closed: "hidden"
+                -->
+                <svg class="hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
             </div>
-          </li>
-        </ul>
+            <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
+              <div class="flex flex-shrink-0 items-center">
+              </div>
+              <div class="hidden sm:ml-6 sm:block">
+                <div class="flex space-x-4">
+                  <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+                  <a href="#green-living"  class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium" >Green Living Tips</a>
+                  <a href="#eco-products" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Eco-Friendly Products</a>
+                  <a href="#impact" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Environmental impact</a>
+                  <a href="#facts" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Fun Facts</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+        <!-- Mobile menu, show/hide based on menu state. -->
+        <div class="sm:hidden" id="mobile-menu">
+          <div class="space-y-1 px-2 pb-3 pt-2">
+            <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+            <a href="#green-living" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Green Living Tips</a>
+            <a href="#eco-products" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Eco-Friendly Products</a>
+            <a href="#impact" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Environmental impact</a>
+            <a href="#facts" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Fun Facts</a>
+          </div>
+        </div>
       </nav>
+      
     </header>
     <main>
-      <section id="green-living">
-        <h1>Green Living Tips(sustainable living practices)</h1>
-        <div class="tab">
-          <button class="tablinks" onclick="viewArticle(event, 'Cleaning')">
-            Cleaning
-          </button>
-          <button class="tablinks" onclick="viewArticle(event, 'Pets')">
-            Pets
-          </button>
-          <button class="tablinks" onclick="viewArticle(event, 'Transport')">
-            Transport
-          </button>
 
-          <button class="tablinks" onclick="viewArticle(event, 'Family')">
-            Family
-          </button>
-          <button class="tablinks" onclick="viewArticle(event, 'Others')">
-            Others
-          </button>
-        </div>
-        <div id="Cleaning" class="tabcontent">
-          <div class="container">
-            <h1>Green Cleaning</h1>
-            <p>
-              Cleaning our homes is essential for maintaining a healthy and
-              comfortable environment. However, traditional cleaning products
-              often contain harmful chemicals that can impact both our health
-              and the environment. Embracing green cleaning practices allows us
-              to keep our homes clean while minimizing our ecological footprint.
-            </p>
 
-            <h2>
-              "Nature provides us with all the resources to maintain a clean and
-              healthy home." - Unknown
-            </h2>
-            <blockquote>
-              <p>
-                Natural ingredients like vinegar, baking soda, lemon, and
-                essential oils can effectively clean and disinfect our homes
-                without harsh chemicals.
-              </p>
-            </blockquote>
+  <div class="home">
+   <h1 style="font-size: xx-large;text-align: left; margin-left: 20px; margin-bottom: 40px;">Welcome to Green Living Haven! </h1>
+   <h3 style=" max-width:950px; font-size: xx-large; font-weight: 100; border-left: 4px solid rgb(12, 195, 2); margin-left: 80px; border-radius: 20px; padding-left: 15px;">
+    "Here, you'll find practical tips and inspiring ideas to help you embrace an eco-friendly lifestyle. 
+    Whether you're looking to reduce your carbon footprint, explore sustainable practices, or simply live a greener life, 
+    we're here to guide you every step of the way. 
+    Join our community and discover how small changes can make a big impact on our planet. 
+    Let's work together towards a healthier, more sustainable future!"</h3>
+  
+  </div>
+  
 
-            <h2>
-              "A clean home is more than just appearances; it’s about fostering
-              a healthy and nurturing environment for ourselves and our loved
-              ones.” 🌿🏡✨ - Unknown
-            </h2>
-            <blockquote>
-              <p>
-                Green cleaning practices prioritize health and well-being by
-                removing dirt and germs without introducing toxins or pollutants
-                into our living spaces. This allows us to breathe easier and
-                enjoy a higher quality of life.
-              </p>
-            </blockquote>
-
-            <h2>
-              "Cleaning with conscience means making choices that are good for
-              both your home and the planet." - Unknown
-            </h2>
-            <blockquote>
-              <p>
-                Green cleaning is more than achieving a sparkling clean home;
-                it’s about making mindful choices that align with our values of
-                sustainability and environmental stewardship.
-              </p>
-            </blockquote>
+<div class="sections">
+  
+        <section id="green-living">
+          <h1>Green Living Tips(sustainable living practices)</h1>
+          <div class="tab">
+            <button class="tablinks" onclick="viewArticle(event, 'Cleaning')">
+              Cleaning
+            </button>
+            <button class="tablinks" onclick="viewArticle(event, 'Pets')">
+              Pets
+            </button>
+            <button class="tablinks" onclick="viewArticle(event, 'Transport')">
+              Transport
+            </button>
+  
+            <button class="tablinks" onclick="viewArticle(event, 'Family')">
+              Family
+            </button>
+            <button class="tablinks" onclick="viewArticle(event, 'Others')">
+              Others
+            </button>
           </div>
-        </div>
-        <div id="Pets" class="tabcontent">
-          <div class="container">
-            <h1>Inspiring Green Living Quotes About Pets</h1>
-            <p>
-              Our furry companions play a crucial role in our journey towards a
-              more sustainable lifestyle. While pets bring immense joy and
-              companionship, they also have an environmental impact. Embracing
-              green living practices extends to every aspect of our lives,
-              including how we care for and interact with our animal friends.
-              Let’s be responsible pet parents, mindful of their well-being, and
-              conscious of our planet.
-            </p>
-
-            <h2>
-              "Until one has loved an animal, a part of one's soul remains
-              unawakened." - Anatole France
-            </h2>
-            <blockquote>
+          <div id="Cleaning" class="tabcontent">
+            <div class="container">
+              <h1>Green Cleaning</h1>
               <p>
-                Caring for animals is both a responsibility and a profound
-                experience. Embracing green living extends this love and care to
-                our environment.
+                Cleaning our homes is essential for maintaining a healthy and
+                comfortable environment. However, traditional cleaning products
+                often contain harmful chemicals that can impact both our health
+                and the environment. Embracing green cleaning practices allows us
+                to keep our homes clean while minimizing our ecological footprint.
               </p>
-            </blockquote>
-
-            <h2>
-              "The greatness of a nation and its moral progress can be judged by
-              the way its animals are treated." - Mahatma Gandhi
-            </h2>
-            <blockquote>
-              <p>
-                Gandhi's words emphasize the importance of compassion and
-                empathy towards all living beings, including animals. Green
-                living involves making choices that prioritize the well-being of
-                not only ourselves but also the planet and its inhabitants. By
-                treating our pets with kindness and respect, we contribute to a
-                more sustainable and ethical society.
-              </p>
-            </blockquote>
-
-            <h2>
-              "Saving one animal won't change the world, but it will change the
-              world for that one animal." - Unknown
-            </h2>
-            <blockquote>
-              <p>
-                This is a powerful reminder that every small act of
-                kindness towards animals makes a difference. Whether it's
-                adopting a rescue pet, choosing eco-friendly pet products, or
-                reducing our pet's carbon footprint, each action contributes to
-                a greener and more compassionate world.
-              </p>
-            </blockquote>
-
+  
+              <h2>
+                "Nature provides us with all the resources to maintain a clean and
+                healthy home." - Unknown
+              </h2>
+              <blockquote>
+                <p>
+                  Natural ingredients like vinegar, baking soda, lemon, and
+                  essential oils can effectively clean and disinfect our homes
+                  without harsh chemicals.
+                </p>
+              </blockquote>
+  
+              <h2>
+                "A clean home is more than just appearances; it’s about fostering
+                a healthy and nurturing environment for ourselves and our loved
+                ones.” 🌿🏡✨ - Unknown
+              </h2>
+              <blockquote>
+                <p>
+                  Green cleaning practices prioritize health and well-being by
+                  removing dirt and germs without introducing toxins or pollutants
+                  into our living spaces. This allows us to breathe easier and
+                  enjoy a higher quality of life.
+                </p>
+              </blockquote>
+  
+              <h2>
+                "Cleaning with conscience means making choices that are good for
+                both your home and the planet." - Unknown
+              </h2>
+              <blockquote>
+                <p>
+                  Green cleaning is more than achieving a sparkling clean home;
+                  it’s about making mindful choices that align with our values of
+                  sustainability and environmental stewardship.
+                </p>
+              </blockquote>
+            </div>
           </div>
-        </div>
-
-        <div id="Transport" class="tabcontent">
-          <div class="container">
-            <h1>Inspirational Green Living Quotes About Transportation</h1>
-            <p>
-              Green transportation is crucial for reducing our environmental impact.
-            </p>
-
-            <h2>
-              "The greatest threat to our planet is the belief that someone else
-              will save it." - Robert Swan
-            </h2>
-            <blockquote>
-              Small changes in transportation habits can help protect the environment.
-              </p>
-            </blockquote>
-
-            <h2>
-              "The Earth does not belong to us: we belong to the Earth." -
-              Marlee Matlin
-            </h2>
-            <blockquote>
+          <div id="Pets" class="tabcontent">
+            <div class="container">
+              <h1>Inspiring Green Living Quotes About Pets</h1>
               <p>
-                Choose sustainable transportation to protect the Earth.
+                Our furry companions play a crucial role in our journey towards a
+                more sustainable lifestyle. While pets bring immense joy and
+                companionship, they also have an environmental impact. Embracing
+                green living practices extends to every aspect of our lives,
+                including how we care for and interact with our animal friends.
+                Let’s be responsible pet parents, mindful of their well-being, and
+                conscious of our planet.
               </p>
-            </blockquote>
-
-            <h2>
-              "Every time you spend money, you're casting a vote for the kind of
-              world you want." - Anna Lappé
-            </h2>
-            <blockquote>
-              <p>
-                Anna Lappé's word reminds us that our purchasing decisions have
-                a powerful impact on the world around us. When it comes to
-                transportation, investing in eco-friendly alternatives sends a
-                message to manufacturers and policymakers that sustainability
-                matters. By supporting green transportation options, we help
-                drive positive change towards a cleaner, healthier planet.
-              </p>
-            </blockquote>
+  
+              <h2>
+                "Until one has loved an animal, a part of one's soul remains
+                unawakened." - Anatole France
+              </h2>
+              <blockquote>
+                <p>
+                  Caring for animals is both a responsibility and a profound
+                  experience. Embracing green living extends this love and care to
+                  our environment.
+                </p>
+              </blockquote>
+  
+              <h2>
+                "The greatness of a nation and its moral progress can be judged by
+                the way its animals are treated." - Mahatma Gandhi
+              </h2>
+              <blockquote>
+                <p>
+                  Gandhi's words emphasize the importance of compassion and
+                  empathy towards all living beings, including animals. Green
+                  living involves making choices that prioritize the well-being of
+                  not only ourselves but also the planet and its inhabitants. By
+                  treating our pets with kindness and respect, we contribute to a
+                  more sustainable and ethical society.
+                </p>
+              </blockquote>
+  
+              <h2>
+                "Saving one animal won't change the world, but it will change the
+                world for that one animal." - Unknown
+              </h2>
+              <blockquote>
+                <p>
+                  This is a powerful reminder that every small act of
+                  kindness towards animals makes a difference. Whether it's
+                  adopting a rescue pet, choosing eco-friendly pet products, or
+                  reducing our pet's carbon footprint, each action contributes to
+                  a greener and more compassionate world.
+                </p>
+              </blockquote>
+  
+            </div>
           </div>
-        </div>
-        <div id="Family" class="tabcontent">
-          <div class="container">
-            <h1>Family and Green Living: Quotes for Sustainable Harmony</h1>
-            <p>
-              Family is the cornerstone of our lives, and it's within the bonds
-              of family that we cultivate values and habits that shape our
-              world. As we strive to live more sustainably, it's crucial to
-              involve our families in the journey towards a greener future. Here
-              are some inspirational quotes that celebrate the intersection of
-              family and green living:
-            </p>
-
-            <h2>
-              "The love of a family is life's greatest blessing." - Unknown
-            </h2>
-            <blockquote>
+  
+          <div id="Transport" class="tabcontent">
+            <div class="container">
+              <h1>Inspirational Green Living Quotes About Transportation</h1>
               <p>
-                This quote reminds us of the profound love and support that
-                families provide. When we embark on the path of green living
-                together as a family, we strengthen our bonds and create lasting
-                memories built on shared values of sustainability and
-                stewardship.
+                Green transportation is crucial for reducing our environmental impact.
               </p>
-            </blockquote>
-
-            <h2>
-              "Alone we can do so little; together we can do so much." - Helen
-              Keller
-            </h2>
-            <blockquote>
-              <p>
-                Helen Keller's words highlight the power of collaboration and
-                unity within families. By working together towards sustainable
-                practices such as recycling, conserving energy, and reducing
-                waste, families can amplify their impact and make meaningful
-                contributions to protecting the environment.
-              </p>
-            </blockquote>
-
-            <h2>
-              "The family is one of nature's masterpieces." - George Santayana
-            </h2>
-            <blockquote>
-              <p>
-                George Santayana's words celebrate the beauty and complexity of
-                family relationships. Just as each member of a family brings
-                unique strengths and perspectives, each individual contribution
-                to green living, no matter how small, contributes to the larger
-                masterpiece of sustainable harmony within our homes and
-                communities.
-              </p>
-            </blockquote>
+  
+              <h2>
+                "The greatest threat to our planet is the belief that someone else
+                will save it." - Robert Swan
+              </h2>
+              <blockquote>
+                Small changes in transportation habits can help protect the environment.
+                </p>
+              </blockquote>
+  
+              <h2>
+                "The Earth does not belong to us: we belong to the Earth." -
+                Marlee Matlin
+              </h2>
+              <blockquote>
+                <p>
+                  Choose sustainable transportation to protect the Earth.
+                </p>
+              </blockquote>
+  
+              <h2>
+                "Every time you spend money, you're casting a vote for the kind of
+                world you want." - Anna Lappé
+              </h2>
+              <blockquote>
+                <p>
+                  Anna Lappé's word reminds us that our purchasing decisions have
+                  a powerful impact on the world around us. When it comes to
+                  transportation, investing in eco-friendly alternatives sends a
+                  message to manufacturers and policymakers that sustainability
+                  matters. By supporting green transportation options, we help
+                  drive positive change towards a cleaner, healthier planet.
+                </p>
+              </blockquote>
+            </div>
           </div>
-        </div>
-        <div id="Others" class="tabcontent">
-          <h1
-            style="
-              margin: 20px auto;
-              padding: 10px 35px;
-              background-color: #f9f9f9;
-              border-radius: 10px;
-              box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-              max-width: 85rem;
-            "
-          >
-            Appreciate conceptual visualizations by perusing our gallery:
-          </h1>
-          <div class="img-container">
-            <section>
-              <img
-                src="Others/ct.jpeg"
-                alt=""
-                style="width: 15rem; height: 22.5rem"
-              />
-              <img src="Others/ct2.jpeg" alt="" style="width: 15rem" />
-              <img src="Others/ct3.jpeg" alt="" style="width: 15rem" />
-              <img src="Others/ct5.jpeg" alt="" style="width: 15rem" />
-              <img src="Others/ct5.png" alt="" style="width: 15rem" />
-            </section>
-
-            <section>
-              <img src="Others/ct4.jpeg" alt="" style="width: 15rem" />
-              <img src="Others/ct7.jpeg" alt="" style="width: 15rem" />
-              <img src="Others/ct9.jpeg" alt="" style="width: 15rem" />
-              <img src="Others/ct8.jpeg" alt="" style="width: 15rem" />
-              <img src="Others/ct6.jpeg" alt="" style="width: 15rem" />
-            </section>
-            <section>
-              <img
-                src="Others/et.jpeg"
-                alt=""
-                style="width: 15rem; height: 22.5rem"
-              />
-              <img src="Others/pt.jpeg" alt="" style="width: 15rem" />
-              <img src="Others/pt1.jpeg" alt="" style="width: 15rem" />
-              <img src="Others/et2.jpeg" alt="" style="width: 15rem" />
-              <img
-                src="Others/et3.jpeg"
-                alt=""
-                style="width: 15rem; height: 22.5rem"
-              />
-            </section>
+          <div id="Family" class="tabcontent">
+            <div class="container">
+              <h1>Family and Green Living: Quotes for Sustainable Harmony</h1>
+              <p>
+                Family is the cornerstone of our lives, and it's within the bonds
+                of family that we cultivate values and habits that shape our
+                world. As we strive to live more sustainably, it's crucial to
+                involve our families in the journey towards a greener future. Here
+                are some inspirational quotes that celebrate the intersection of
+                family and green living:
+              </p>
+  
+              <h2>
+                "The love of a family is life's greatest blessing." - Unknown
+              </h2>
+              <blockquote>
+                <p>
+                  This quote reminds us of the profound love and support that
+                  families provide. When we embark on the path of green living
+                  together as a family, we strengthen our bonds and create lasting
+                  memories built on shared values of sustainability and
+                  stewardship.
+                </p>
+              </blockquote>
+  
+              <h2>
+                "Alone we can do so little; together we can do so much." - Helen
+                Keller
+              </h2>
+              <blockquote>
+                <p>
+                  Helen Keller's words highlight the power of collaboration and
+                  unity within families. By working together towards sustainable
+                  practices such as recycling, conserving energy, and reducing
+                  waste, families can amplify their impact and make meaningful
+                  contributions to protecting the environment.
+                </p>
+              </blockquote>
+  
+              <h2>
+                "The family is one of nature's masterpieces." - George Santayana
+              </h2>
+              <blockquote>
+                <p>
+                  George Santayana's words celebrate the beauty and complexity of
+                  family relationships. Just as each member of a family brings
+                  unique strengths and perspectives, each individual contribution
+                  to green living, no matter how small, contributes to the larger
+                  masterpiece of sustainable harmony within our homes and
+                  communities.
+                </p>
+              </blockquote>
+            </div>
+          </div>
+          <div id="Others" class="tabcontent">
+            <h1
+              style="
+                margin: 20px auto;
+                padding: 10px 35px;
+                background-color: #f9f9f9;
+                border-radius: 10px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                max-width: 85rem;
+              "
+            >
+              Appreciate conceptual visualizations by perusing our gallery:
+            </h1>
+            <div class="img-container">
+              <section>
+                <img
+                  src="Others/ct.jpeg"
+                  alt=""
+                  style="width: 15rem; height: 22.5rem"
+                />
+                <img src="Others/ct2.jpeg" alt="" style="width: 15rem" />
+                <img src="Others/ct3.jpeg" alt="" style="width: 15rem" />
+                <img src="Others/ct5.jpeg" alt="" style="width: 15rem" />
+                <img src="Others/ct5.png" alt="" style="width: 15rem" />
+              </section>
+  
+              <section>
+                <img src="Others/ct4.jpeg" alt="" style="width: 15rem" />
+                <img src="Others/ct7.jpeg" alt="" style="width: 15rem" />
+                <img src="Others/ct9.jpeg" alt="" style="width: 15rem" />
+                <img src="Others/ct8.jpeg" alt="" style="width: 15rem" />
+                <img src="Others/ct6.jpeg" alt="" style="width: 15rem" />
+              </section>
+              <section>
+                <img
+                  src="Others/et.jpeg"
+                  alt=""
+                  style="width: 15rem; height: 22.5rem"
+                />
+                <img src="Others/pt.jpeg" alt="" style="width: 15rem" />
+                <img src="Others/pt1.jpeg" alt="" style="width: 15rem" />
+                <img src="Others/et2.jpeg" alt="" style="width: 15rem" />
+                <img
+                  src="Others/et3.jpeg"
+                  alt=""
+                  style="width: 15rem; height: 22.5rem"
+                />
+              </section>
+              <h3 style="text-align: center">
+                Get more ideas on
+                <a href="https://www.pinterest.com">Pinterest</a>
+              </h3>
+            </div>
+          </div>
+        </section>
+        <section id="eco-products">
+          <h1>Eco-Friendly Products(eco-friendly lifestyle choices)</h1>
+          <div class="tab">
+            <button class="tablinks" onclick="viewArticle(event, 'Kitchen')">
+              Kitchen
+            </button>
+            <button class="tablinks" onclick="viewArticle(event, 'Garden')">
+              Garden
+            </button>
+            <button
+              class="tablinks"
+              onclick="viewArticle(event, 'Personal care')"
+            >
+              Personal care
+            </button>
+          </div>
+  
+          <div id="Kitchen" class="tabcontent">
+            <h3>Kitchen</h3>
+            <div class="img-container">
+              <img src="/Others/product1.jpeg" alt="" style="width: 15rem" />
+              <img src="/Others/product2.jpeg" alt="" style="width: 15rem" />
+              <img src="/Others/product3.jpeg" alt="" style="width: 15rem" />
+              <img src="/Others/product6.jpeg" alt="" style="width: 15rem" />
+              <img src="/Others/product10.jpeg" alt="" style="width: 15rem" />
+            </div>
             <h3 style="text-align: center">
               Get more ideas on
               <a href="https://www.pinterest.com">Pinterest</a>
             </h3>
           </div>
-        </div>
-      </section>
-      <section id="eco-products">
-        <h2>Eco-Friendly Products(eco-friendly lifestyle choices)</h2>
-        <div class="tab">
-          <button class="tablinks" onclick="viewArticle(event, 'Kitchen')">
-            Kitchen
-          </button>
-          <button class="tablinks" onclick="viewArticle(event, 'Garden')">
-            Garden
-          </button>
-          <button
-            class="tablinks"
-            onclick="viewArticle(event, 'Personal care')"
-          >
-            Personal care
-          </button>
-        </div>
-
-        <div id="Kitchen" class="tabcontent">
-          <h3>Kitchen</h3>
-          <div class="img-container">
-            <img src="/Others/product1.jpeg" alt="" style="width: 15rem" />
-            <img src="/Others/product2.jpeg" alt="" style="width: 15rem" />
-            <img src="/Others/product3.jpeg" alt="" style="width: 15rem" />
-            <img src="/Others/product6.jpeg" alt="" style="width: 15rem" />
-            <img src="/Others/product10.jpeg" alt="" style="width: 15rem" />
+  
+          <div id="Garden" class="tabcontent">
+            <h3>Garden</h3>
+            <div class="img-container">
+              <img src="Others/product4.jpeg" alt="" style="width: 15rem" />
+              <img src="Others/product5.jpeg" alt="" style="width: 15rem" />
+              <img src="Others/product11.jpeg" alt="" style="width: 15rem" />
+              <img src="Others/product12.jpeg" alt="" style="width: 15rem" />
+              <img src="Others/product13.jpeg" alt="" style="width: 15rem" />
+            </div>
+            <h3 style="text-align: center">
+              Get more ideas on
+              <a href="https://www.pinterest.com">Pinterest</a>
+            </h3>
           </div>
-          <h3 style="text-align: center">
-            Get more ideas on
-            <a href="https://www.pinterest.com">Pinterest</a>
-          </h3>
-        </div>
-
-        <div id="Garden" class="tabcontent">
-          <h3>Garden</h3>
-          <div class="img-container">
-            <img src="Others/product4.jpeg" alt="" style="width: 15rem" />
-            <img src="Others/product5.jpeg" alt="" style="width: 15rem" />
-            <img src="Others/product11.jpeg" alt="" style="width: 15rem" />
-            <img src="Others/product12.jpeg" alt="" style="width: 15rem" />
-            <img src="Others/product13.jpeg" alt="" style="width: 15rem" />
+  
+          <div id="Personal care" class="tabcontent">
+            <h3>Personal care</h3>
+            <div class="img-container">
+              <img
+                src="Others/product7.jpeg"
+                alt=""
+                style="width: 15rem; height: 22.5rem"
+              />
+              <img
+                src="Others/product8.jpeg"
+                alt=""
+                style="width: 15rem; height: 22.5rem"
+              />
+              <img src="Others/product9.jpeg" alt="" style="width: 15rem" />
+              <img src="Others/product14.jpeg" alt="" style="width: 15rem" />
+              <img src="Others/product15.jpeg" alt="" style="width: 15rem" />
+            </div>
+            <h3 style="text-align: center">
+              Get more ideas on
+              <a href="https://www.pinterest.com">Pinterest</a>
+            </h3>
           </div>
-          <h3 style="text-align: center">
-            Get more ideas on
-            <a href="https://www.pinterest.com">Pinterest</a>
-          </h3>
-        </div>
-
-        <div id="Personal care" class="tabcontent">
-          <h3>Personal care</h3>
-          <div class="img-container">
-            <img
-              src="Others/product7.jpeg"
-              alt=""
-              style="width: 15rem; height: 22.5rem"
-            />
-            <img
-              src="Others/product8.jpeg"
-              alt=""
-              style="width: 15rem; height: 22.5rem"
-            />
-            <img src="Others/product9.jpeg" alt="" style="width: 15rem" />
-            <img src="Others/product14.jpeg" alt="" style="width: 15rem" />
-            <img src="Others/product15.jpeg" alt="" style="width: 15rem" />
+        </section>
+        <section id="impact">
+          <h1>reducing environmental impact</h1>
+          <div class="tab">
+            <button class="tablinks" onclick="viewArticle(event, 'Understand')">
+              Understand environmental impact
+            </button>
+            <button class="tablinks" onclick="viewArticle(event, 'Do')">
+              What can I do?
+            </button>
           </div>
-          <h3 style="text-align: center">
-            Get more ideas on
-            <a href="https://www.pinterest.com">Pinterest</a>
-          </h3>
-        </div>
-      </section>
-      <section id="green-living">
-        <h2>reducing environmental impact</h2>
-        <div class="tab">
-          <button class="tablinks" onclick="viewArticle(event, 'Understand')">
-            Understand environmental impact
-          </button>
-          <button class="tablinks" onclick="viewArticle(event, 'Do')">
-            What can I do?
-          </button>
-        </div>
-        <div id="Understand" class="tabcontent">
-          <h3>What is environmental impact?</h3>
-          <blockquote>
-            <p>
-              Environmental impact refers to the effect that human activities
-              have on the natural world. It encompasses the changes, both
-              positive and negative, that our actions cause in ecosystems,
-              biodiversity, air and water quality, and the overall health of the
-              planet. These impacts can be direct, such as pollution from
-              factories or deforestation, or indirect, like the carbon emissions
-              contributing to climate change. Understanding environmental impact
-              is crucial for making informed decisions about how we interact
-              with our surroundings and for fostering sustainable practices that
-              minimize harm to the environment.
-            </p>
-          </blockquote>
-        </div>
-
-        <div id="Do" class="tabcontent">
-          <h3>What can I do?</h3>
-          <blockquote>
-            <p>
-              To minimize environmental impact, individuals can adopt various
-              sustainable practices in their daily lives. Simple actions, such
-              as reducing energy consumption, conserving water, and minimizing
-              waste generation, can collectively make a significant difference.
-              Choosing eco-friendly transportation options, such as walking,
-              cycling, or using public transit, helps reduce carbon emissions.
-              Additionally, supporting environmentally responsible products and
-              businesses encourages sustainable production and consumption
-              patterns. By making conscious choices in our consumption habits,
-              we can contribute to preserving the natural world for future
-              generations.
-            </p>
-          </blockquote>
-        </div>
-      </section>
-      <section id="green-living">
-        <h2>Fun facts(Did you know?)</h2>
-        <h3>Discover more fun facts around you</h3>
-        <div class="slideshow-container">
-          <div class="mySlides fade">
-            <img src="Others/slide1.jpeg" style="width: 100%" />
-            <div class="text">A beautiful environment starts with you</div>
+          <div id="Understand" class="tabcontent">
+            <h3>What is environmental impact?</h3>
+            <blockquote>
+              <p>
+                Environmental impact refers to the effect that human activities
+                have on the natural world. It encompasses the changes, both
+                positive and negative, that our actions cause in ecosystems,
+                biodiversity, air and water quality, and the overall health of the
+                planet. These impacts can be direct, such as pollution from
+                factories or deforestation, or indirect, like the carbon emissions
+                contributing to climate change. Understanding environmental impact
+                is crucial for making informed decisions about how we interact
+                with our surroundings and for fostering sustainable practices that
+                minimize harm to the environment.
+              </p>
+            </blockquote>
           </div>
-
-          <div class="mySlides fade">
-            <img src="Others/slide2.jpeg" style="width: 100%" />
-            <div class="text">Caption Two</div>
+  
+          <div id="Do" class="tabcontent">
+            <h3>What can I do?</h3>
+            <blockquote>
+              <p>
+                To minimize environmental impact, individuals can adopt various
+                sustainable practices in their daily lives. Simple actions, such
+                as reducing energy consumption, conserving water, and minimizing
+                waste generation, can collectively make a significant difference.
+                Choosing eco-friendly transportation options, such as walking,
+                cycling, or using public transit, helps reduce carbon emissions.
+                Additionally, supporting environmentally responsible products and
+                businesses encourages sustainable production and consumption
+                patterns. By making conscious choices in our consumption habits,
+                we can contribute to preserving the natural world for future
+                generations.
+              </p>
+            </blockquote>
           </div>
-
-          <div class="mySlides fade">
-            <img src="Others/slide3.jpeg" style="width: 100%" />
-            <div class="text">Caption Three</div>
+        </section>
+        <section id="facts">
+          <h1 style="margin-bottom: 20px;">Fun facts(Did you know?)</h1>
+          <div class="slideshow-container">
+            <div class="mySlides fade">
+              <img src="Others/slide1.jpeg" style="width: 100%" />
+              <div class="text" style="color: white;">A beautiful environment starts with you</div>
+            </div>
+  
+            <div class="mySlides fade">
+              <img src="Others/slide2.jpeg" style="width: 100%" />
+            </div>
+  
+            <div class="mySlides fade">
+              <img src="Others/slide3.jpeg" style="width: 100%" />
+              <div class="text" style="color: white;">One tree can save 12 lives</div>
+            </div>
+  
+            <div class="mySlides fade">
+              <img src="Others/slide4.jpeg" style="width: 100%" />
+             
+            </div>
           </div>
-
-          <div class="mySlides fade">
-            <img src="Others/slide4.jpeg" style="width: 100%" />
-            <div class="text">Caption Text</div>
+          <br />
+  
+          <div style="text-align: center">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
           </div>
-        </div>
-        <br />
-
-        <div style="text-align: center">
-          <span class="dot"></span>
-          <span class="dot"></span>
-          <span class="dot"></span>
-          <span class="dot"></span>
-        </div>
-      </section>
+        </section>
+</div>
     </main>
     <footer>
       <p>&copy; 2024 Sustainable Living Tips</p>
